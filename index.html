@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f0f3f9;--card:#fff;--bd:#e2e8f0;--bd2:#cbd5e1;--tx:#0f172a;--t2:#334155;--mu:#64748b;--mu2:#94a3b8;--p:#1e40af;--p2:#3b82f6;--gold:#b45309;--gold2:#f59e0b;--crit:#e11d48;--critbg:#fff1f2;--high:#ea580c;--highbg:#fff7ed;--med:#ca8a04;--medbg:#fefce8;--good:#059669;--goodbg:#ecfdf5;--info:#0284c7;--infobg:#f0f9ff;--track:#e8eef5;--th:#f8fafc;--shadow:0 4px 14px -4px rgba(15,23,42,.1);--r:12px;--hdr1:#070d1c;--hdr2:#0f172a;--hdr3:#1e3a8a}
-[data-theme="dark"]{--bg:#0a0e17;--card:#151c28;--bd:#243044;--bd2:#334155;--tx:#e8eef7;--t2:#b8c5d6;--mu:#8896a8;--mu2:#5a6878;--p:#60a5fa;--p2:#93c5fd;--gold:#fbbf24;--gold2:#fcd34d;--crit:#fb7185;--critbg:#3f1520;--high:#fdba74;--highbg:#3d2515;--med:#fcd34d;--medbg:#3d3215;--good:#34d399;--goodbg:#0f2a22;--info:#7dd3fc;--infobg:#122433;--track:#1e293b;--th:#1a2332;--shadow:0 8px 24px rgba(0,0,0,.45);--hdr1:#050810;--hdr2:#0a0e17;--hdr3:#111827}
+[data-theme="dark"]{--bg:#0a0e17;--card:#151c28;--bd:#243044;--bd2:#334155;--tx:#e8eef7;--t2:#b8c5d6;--mu:#8896a8;--mu2:#5a6878;--p:#60a5fa;--p2:#93c5fd;--gold:#fbbf24;--gold2:#fcd34d;--crit:#fb7185;--critbg:#3f1520;--high:#fdba74;--highbg:#3d2515;--med:#fcd34d;--medbg:#3d3215;--good:#34d399;--goodbg:#0f2a22;--info:#7dd3fc;--infobg:#122433;--track:#1e293b;--th:#1a2332;--hdr1:#050810;--hdr2:#0a0e17;--hdr3:#111827}
 [data-theme="sand"]{--bg:#f7f1e8;--card:#fffdf9;--bd:#e8dcc8;--bd2:#d4c4a8;--tx:#1c1410;--t2:#4a3f35;--mu:#7a6b5d;--mu2:#a89880;--p:#9a3412;--p2:#c2410c;--gold:#a16207;--gold2:#ca8a04;--crit:#b91c1c;--critbg:#fef2f2;--high:#c2410c;--highbg:#fff7ed;--med:#a16207;--medbg:#fefce8;--good:#166534;--goodbg:#f0fdf4;--info:#075985;--infobg:#f0f9ff;--track:#efe6d8;--th:#faf6f0;--hdr1:#1c1410;--hdr2:#292018;--hdr3:#7c2d12}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--tx);font-size:14px;line-height:1.55}
 button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:none;background:none}
 .has-tip{border-bottom:1px dashed var(--mu2);cursor:help}
-#tipBox{position:fixed;z-index:9000;max-width:min(320px,88vw);background:#0f172a;color:#fff;padding:10px 12px;border-radius:10px;font-size:12px;line-height:1.7;opacity:0;pointer-events:none;transition:.15s;box-shadow:0 12px 32px rgba(0,0,0,.4);text-align:right}
+#tipBox{position:fixed;z-index:9000;max-width:min(320px,88vw);background:#0f172a;color:#fff;padding:10px 12px;border-radius:10px;font-size:12px;line-height:1.7;opacity:0;pointer-events:none;transition:.15s;text-align:right}
 #tipBox.on{opacity:1}
 #lock{position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,#070d1c,#0f172a 50%,#1e3a8a);display:flex;align-items:center;justify-content:center;padding:20px}
 #lock.hid{display:none!important}
-.lock-box{background:#fff;border-radius:18px;padding:26px 22px;width:min(400px,100%);text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.lock-box{background:#fff;border-radius:18px;padding:26px 22px;width:min(400px,100%);text-align:center}
 .lock-box img{width:72px;height:72px;border-radius:50%;object-fit:cover;margin-bottom:10px;background:#0f172a}
 .lock-box h1{font-size:15px;font-weight:800;color:#0f172a;margin-bottom:4px}
 .lock-box .sub{font-size:11.5px;color:#64748b;margin-bottom:16px}
@@ -39,8 +39,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:none
 .header-in{max-width:1500px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .brand{display:flex;gap:10px;align-items:center;flex:1;min-width:0}
 .brand img{width:42px;height:42px;border-radius:50%;background:#fff;object-fit:cover}
-.brand h1{font-size:14px;font-weight:800}
-.brand p{font-size:10px;color:#94a3b8}.brand .co{color:var(--gold2);font-weight:700}
+.brand h1{font-size:14px;font-weight:800}.brand p{font-size:10px;color:#94a3b8}.brand .co{color:var(--gold2);font-weight:700}
 .hdr-right{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-inline-start:auto}
 .pill{font-size:10px;padding:4px 9px;border-radius:999px;font-weight:700}
 .pill.g{background:rgba(16,185,129,.2);color:#34d399}.pill.n{background:rgba(148,163,184,.2);color:#cbd5e1}.pill.o{background:rgba(245,158,11,.2);color:#fbbf24}
@@ -57,19 +56,19 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:none
 .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:10px;margin-bottom:12px}
 .filters select,.filters input{padding:6px 8px;border:1px solid var(--bd2);border-radius:8px;font-size:12px;background:var(--card);min-width:100px}
 .filters label{font-size:11px;color:var(--mu);display:flex;flex-direction:column;gap:2px}
-.banner{border-radius:var(--r);padding:12px 14px;margin-bottom:12px;color:#fff;font-weight:700}
-.banner.bad{background:linear-gradient(135deg,#e11d48,#be123c)}.banner.warn{background:linear-gradient(135deg,#ea580c,#c2410c)}.banner.ok{background:linear-gradient(135deg,#059669,#047857)}
-.banner small{display:block;font-weight:500;opacity:.9;margin-top:3px;font-size:12px}
-.kpi-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-bottom:12px}
+.kpi-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:12px}
 .kpi{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px;cursor:pointer;position:relative;overflow:hidden}
 .kpi:hover{box-shadow:var(--shadow)}
 .kpi::before{content:'';position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px}
-.kpi.c::before{background:var(--crit)}.kpi.h::before{background:var(--high)}.kpi.m::before{background:var(--med)}.kpi.g::before{background:var(--good)}.kpi.i::before{background:var(--info)}.kpi.gold::before{background:var(--gold2)}
-.kpi .l{font-size:11.5px;color:var(--mu);font-weight:600}.kpi .v{font-size:18px;font-weight:800;margin-top:4px}.kpi .s{font-size:10.5px;color:var(--mu2);margin-top:3px}.kpi .go{font-size:10.5px;color:var(--p2);margin-top:6px;font-weight:600}
+.kpi.c::before{background:var(--crit)}.kpi.h::before{background:var(--high)}.kpi.m::before{background:var(--med)}.kpi.g::before{background:var(--good)}.kpi.i::before{background:var(--info)}
+.kpi .l{font-size:11.5px;color:var(--mu);font-weight:600}.kpi .v{font-size:20px;font-weight:800;margin-top:4px}.kpi .s{font-size:10.5px;color:var(--mu2);margin-top:3px}.kpi .go{font-size:10.5px;color:var(--p2);margin-top:6px;font-weight:600}
 .panel{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:14px;margin-bottom:12px}
 .st{font-size:13px;font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .st .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--p2);margin-left:6px}
 .st small{font-weight:500;color:var(--mu);font-size:11.5px}
+.st-actions{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.btn-sm{padding:5px 10px;border-radius:7px;font-size:11.5px;font-weight:600;background:var(--th);border:1px solid var(--bd);color:var(--t2)}
+.btn-sm.primary{background:var(--p);color:#fff;border-color:var(--p)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:900px){.two{grid-template-columns:1fr}.kpi-g{grid-template-columns:repeat(2,1fr)}}
 .chip{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
@@ -82,8 +81,8 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:none
 .tbl-w{overflow:auto;max-height:480px;border:1px solid var(--bd);border-radius:10px}
 table{width:100%;border-collapse:collapse;font-size:12.5px}
 th{position:sticky;top:0;background:var(--th);padding:9px 10px;text-align:center;font-size:11px;color:var(--t2);border-bottom:1px solid var(--bd);z-index:1}
-th.r{text-align:right}td{padding:9px 10px;border-bottom:1px solid var(--bd);text-align:center;vertical-align:middle}td.r{text-align:right}
-tr:hover td{background:var(--th);cursor:pointer}.num{direction:ltr;text-align:center;font-variant-numeric:tabular-nums}
+th.r,td.r{text-align:right}td{padding:9px 10px;border-bottom:1px solid var(--bd);text-align:center}
+tr:hover td{background:var(--th);cursor:pointer}.num{direction:ltr;text-align:center}
 .bar-r{display:flex;align-items:center;gap:8px;font-size:12px;margin-bottom:7px}
 .bar-n{width:110px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bar-t{flex:1;height:14px;background:var(--track);border-radius:4px;overflow:hidden}
@@ -96,25 +95,43 @@ tr:hover td{background:var(--th);cursor:pointer}.num{direction:ltr;text-align:ce
 .drawer.on{transform:translateX(0)}
 .df{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
 .df .f{background:var(--th);border-radius:8px;padding:8px}.df .f .lb{font-size:10px;color:var(--mu)}.df .f .vl{font-size:13px;font-weight:600}
-.modal-bg{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:100;display:none;align-items:flex-end;justify-content:center;padding:0}
+.modal-bg{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:100;display:none;align-items:flex-end;justify-content:center}
 .modal-bg.on{display:flex}
-.modal{background:var(--card);width:min(560px,100%);max-height:82vh;border-radius:16px 16px 0 0;overflow:auto;padding:16px}
+.modal{background:var(--card);width:min(560px,100%);max-height:85vh;border-radius:16px 16px 0 0;overflow:auto;padding:16px}
 .modal h3{font-size:15px}.modal .ms{font-size:12px;color:var(--mu);margin:4px 0 12px}
-.btn-print{padding:6px 12px;border-radius:8px;background:var(--p);color:#fff;font-size:12px;font-weight:600}
-.empty{text-align:center;padding:24px;color:var(--mu)}
+.share-opts{display:grid;gap:8px;margin-top:8px}
+.share-opts button{padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--th);font-weight:600;text-align:right}
+.share-opts button:hover{border-color:var(--p2);background:var(--infobg)}
+.coll{border:1px solid var(--bd);border-radius:10px;margin-bottom:8px;overflow:hidden}
+.coll-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px;background:var(--th);cursor:pointer;font-weight:700;font-size:13px}
+.coll-hd:hover{background:var(--bd)}
+.coll-hd .chev{transition:.2s;display:inline-block}
+.coll.open .coll-hd .chev{transform:rotate(90deg)}
+.coll-bd{display:none;padding:10px 12px;border-top:1px solid var(--bd)}
+.coll.open .coll-bd{display:block}
+.empty{text-align:center;padding:20px;color:var(--mu)}
 .msg{background:var(--medbg);border:1px solid var(--bd2);color:var(--gold);padding:10px;border-radius:10px;font-size:12.5px;margin-bottom:10px}
 .hint{font-size:11.5px;color:var(--mu);background:var(--th);border:1px dashed var(--bd2);border-radius:8px;padding:8px 10px;margin-bottom:10px}
-.plan{border:1px solid var(--bd);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--th)}
-.plan b{color:var(--p)}
+.sync-line{font-size:11.5px;color:var(--mu);margin-bottom:10px}
 .foot{text-align:center;color:var(--mu);font-size:11px;padding:12px}
 .theme-g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .theme-opt{border:2px solid var(--bd);border-radius:10px;padding:10px;text-align:center}
 .theme-opt.on{border-color:var(--p2)}.theme-prev{height:36px;border-radius:6px;margin-bottom:6px}
-@media print{.header,.tabs-wrap,.filters,.hdr-right,.btn,#lock,.sample-banner{display:none!important}body{background:#fff}.panel{break-inside:avoid}}
+#printArea{display:none}
+@media print{
+  body *{visibility:hidden}
+  #printArea,#printArea *{visibility:visible}
+  #printArea{display:block!important;position:absolute;inset:0;padding:16px;background:#fff;color:#000}
+  #printArea table{width:100%;border-collapse:collapse;font-size:11px}
+  #printArea th,#printArea td{border:1px solid #ccc;padding:6px;text-align:right}
+  #printArea h1{font-size:16px;margin-bottom:8px}
+  #printArea .meta{font-size:11px;color:#555;margin-bottom:12px}
+}
 </style>
 </head>
 <body>
 <div id="tipBox"></div>
+<div id="printArea"></div>
 <div id="lock">
   <div class="lock-box">
     <img src="logo.png" alt="" onerror="this.style.display='none'">
@@ -154,7 +171,7 @@ tr:hover td{background:var(--th);cursor:pointer}.num{direction:ltr;text-align:ce
   <main class="main">
     <div class="filters" id="filters"></div>
     <div id="view"></div>
-    <div class="foot">پتروشیمی آبادان · داده از سامانه هوشمند Excel</div>
+    <div class="foot">پتروشیمی آبادان · سامانه هوشمند Excel</div>
   </main>
 </div>
 <div class="drawer-bg" id="drawerBg"></div>
@@ -164,48 +181,49 @@ tr:hover td{background:var(--th);cursor:pointer}.num{direction:ltr;text-align:ce
   <div id="dSub" style="font-size:12px;color:var(--mu);margin-bottom:8px"></div>
   <div id="dBody"></div>
 </aside>
-<div class="modal-bg" id="kpiModal">
+<div class="modal-bg" id="shareModal">
   <div class="modal">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px">
-      <h3 id="kpiTitle"></h3>
-      <div>
-        <button type="button" class="btn-print" id="kpiPrint">چاپ</button>
-        <button type="button" id="kpiX" style="margin-right:8px;font-size:16px">✕</button>
-      </div>
+    <button type="button" id="shareX" style="float:left">✕</button>
+    <h3 id="shareTitle">خروجی و اشتراک</h3>
+    <div class="ms" id="shareSub"></div>
+    <div class="share-opts">
+      <button type="button" id="optPrint">چاپ مستقیم</button>
+      <button type="button" id="optPdf">دانلود / ذخیره به‌صورت PDF (از پنجره چاپ)</button>
+      <button type="button" id="optShare">اشتراک‌گذاری (پیام‌رسان / ایمیل سیستم)</button>
+      <button type="button" id="optCopy">کپی متن در کلیپ‌بورد</button>
     </div>
-    <div class="ms" id="kpiSub"></div>
-    <div id="kpiBody"></div>
   </div>
 </div>
 <script>
 (function(){
 "use strict";
-var CODE_OPS="1",CODE_MGMT="2",LS_AUTH="apc_auth_v3",LS_MODE="apc_mode_v3",LS_THEME="apc_theme_v3";
+var CODE_OPS="1",CODE_MGMT="2",LS_AUTH="apc_auth_v4",LS_MODE="apc_mode_v4",LS_THEME="apc_theme_v4";
 var DATA_URLS=["data/dashboard.json","./data/dashboard.json","data.json"];
-var SAMPLE={"generated": "2026-09-30T12:00:00", "items": [{"ItemCode": "ITM-0002", "ItemName": "بلبرینگ", "CategoryCode": "قطعات مکانیکی", "Criticality": "A", "AvailableStock": 17, "StockStatus": "CRITICAL", "OrderRecommendation": "ORDER", "UrgencyLevel": "HIGH", "DaysToStockout": 4.2, "SuggestedOrderQty": 267, "CoverageDays": 4.2, "AvgDailyDemand": 4.2, "InventoryHealthStatus": "HEALTHY", "ActionFlag": true, "PreferredSupplierCode": "SUP-0006", "PreferredSupplierRiskLevel": "Medium", "AvgLeadTime": 14, "OrderTimingStatus": "ORDER NOW", "OrderTimingGap": -24, "MonthsSinceLastReceipt": 2, "OptimalOrderDay": "2026-09-05"}, {"ItemCode": "ITM-0006", "ItemName": "پروانه پمپ", "CategoryCode": "قطعات مکانیکی", "Criticality": "A", "AvailableStock": 14, "StockStatus": "WARNING", "OrderRecommendation": "ORDER", "UrgencyLevel": "MEDIUM", "DaysToStockout": 25, "SuggestedOrderQty": 18, "CoverageDays": 25, "AvgDailyDemand": 0.5, "InventoryHealthStatus": "HEALTHY", "PreferredSupplierCode": "SUP-0012", "PreferredSupplierRiskLevel": "High", "AvgLeadTime": 30, "OrderTimingStatus": "PREPARE", "OrderTimingGap": 5, "MonthsSinceLastReceipt": 3}, {"ItemCode": "ITM-0001", "ItemName": "پیچ و مهره", "CategoryCode": "یراق", "Criticality": "B", "AvailableStock": 904, "StockStatus": "GOOD", "OrderRecommendation": "OK", "UrgencyLevel": "LOW", "DaysToStockout": 70, "SuggestedOrderQty": 0, "CoverageDays": 70, "AvgDailyDemand": 12, "InventoryHealthStatus": "HEALTHY", "PreferredSupplierCode": "SUP-0001", "PreferredSupplierRiskLevel": "Low", "AvgLeadTime": 10, "OrderTimingStatus": "SAFE", "MonthsSinceLastReceipt": 1}, {"ItemCode": "ITM-0089", "ItemName": "کیت اورهال کمپرسور", "CategoryCode": "قطعات مکانیکی", "Criticality": "B", "AvailableStock": 50, "StockStatus": "GOOD", "OrderRecommendation": "OK", "UrgencyLevel": "LOW", "DaysToStockout": 200, "SuggestedOrderQty": 0, "CoverageDays": 200, "AvgDailyDemand": 0.2, "InventoryHealthStatus": "DEAD", "DeadStockFlag": true, "PreferredSupplierCode": "SUP-0003", "PreferredSupplierRiskLevel": "Medium", "AvgLeadTime": 20, "OrderTimingStatus": "SAFE", "MonthsSinceLastReceipt": 18}, {"ItemCode": "ITM-0040", "ItemName": "فیلتر روغن", "CategoryCode": "مصرفی", "Criticality": "C", "AvailableStock": 400, "StockStatus": "GOOD", "OrderRecommendation": "OK", "DaysToStockout": 150, "SuggestedOrderQty": 0, "CoverageDays": 150, "AvgDailyDemand": 2, "InventoryHealthStatus": "SLOW", "SlowMovingFlag": true, "PreferredSupplierCode": "SUP-0012", "PreferredSupplierRiskLevel": "High", "AvgLeadTime": 12, "MonthsSinceLastReceipt": 14}], "suppliers": [{"SupplierCode": "SUP-0006", "SupplierName": "روغن‌سازی سپاهان", "ItemCode": "ITM-0002", "TotalDeliveries": 20, "LateDeliveries": 5, "AvgDelayDays": 2, "DelayRate": 0.25, "SupplierRiskLevel": "Medium", "Preferred": true}, {"SupplierCode": "SUP-0012", "SupplierName": "تجهیزات برق آبادان", "ItemCode": "ITM-0006", "TotalDeliveries": 10, "LateDeliveries": 8, "AvgDelayDays": 8, "DelayRate": 0.8, "SupplierRiskLevel": "High", "Preferred": false}, {"SupplierCode": "SUP-0012", "SupplierName": "تجهیزات برق آبادان", "ItemCode": "ITM-0040", "TotalDeliveries": 10, "LateDeliveries": 8, "AvgDelayDays": 8, "DelayRate": 0.8, "SupplierRiskLevel": "High", "Preferred": false}, {"SupplierCode": "SUP-0001", "SupplierName": "پیچ‌سازان اهواز", "ItemCode": "ITM-0001", "TotalDeliveries": 40, "LateDeliveries": 2, "AvgDelayDays": 0.5, "DelayRate": 0.05, "SupplierRiskLevel": "Low", "Preferred": true}], "values": [{"ItemCode": "ITM-0002", "LatestUnitCost": 5000000, "InventoryValue": 85000000, "TurnoverRatio": 2.1, "HealthScore": 40}, {"ItemCode": "ITM-0006", "LatestUnitCost": 12000000, "InventoryValue": 168000000, "TurnoverRatio": 0.9, "HealthScore": 55}, {"ItemCode": "ITM-0001", "LatestUnitCost": 50000, "InventoryValue": 45200000, "TurnoverRatio": 3.5, "HealthScore": 82}, {"ItemCode": "ITM-0089", "LatestUnitCost": 53500000, "InventoryValue": 2675000000, "TurnoverRatio": 0.2, "OverstockFlag": true, "HealthScore": 25}, {"ItemCode": "ITM-0040", "LatestUnitCost": 800000, "InventoryValue": 320000000, "TurnoverRatio": 0.5, "HealthScore": 48}]};
+var SAMPLE={"generated": "2026-09-30T14:00:00", "items": [{"ItemCode": "ITM-0002", "ItemName": "بلبرینگ", "CategoryCode": "قطعات مکانیکی", "Criticality": "A", "AvailableStock": 17, "StockStatus": "CRITICAL", "OrderRecommendation": "ORDER", "UrgencyLevel": "HIGH", "DaysToStockout": 4.2, "SuggestedOrderQty": 267, "CoverageDays": 4.2, "AvgDailyDemand": 4.2, "InventoryHealthStatus": "HEALTHY", "PreferredSupplierCode": "SUP-0006", "PreferredSupplierRiskLevel": "Medium", "AvgLeadTime": 14, "OrderTimingStatus": "ORDER NOW", "OrderTimingGap": -24, "MonthsSinceLastReceipt": 2}, {"ItemCode": "ITM-0006", "ItemName": "پروانه پمپ", "CategoryCode": "قطعات مکانیکی", "Criticality": "A", "AvailableStock": 14, "StockStatus": "WARNING", "OrderRecommendation": "ORDER", "DaysToStockout": 25, "SuggestedOrderQty": 18, "CoverageDays": 25, "AvgDailyDemand": 0.5, "InventoryHealthStatus": "HEALTHY", "PreferredSupplierCode": "SUP-0012", "PreferredSupplierRiskLevel": "High", "AvgLeadTime": 30, "OrderTimingStatus": "PREPARE", "OrderTimingGap": 5, "MonthsSinceLastReceipt": 3}, {"ItemCode": "ITM-0007", "ItemName": "سیل مکانیکی", "CategoryCode": "قطعات مکانیکی", "Criticality": "A", "AvailableStock": 5, "StockStatus": "GOOD", "OrderRecommendation": "ORDER", "DaysToStockout": 12, "SuggestedOrderQty": 40, "CoverageDays": 12, "AvgDailyDemand": 0.4, "InventoryHealthStatus": "HEALTHY", "PreferredSupplierCode": "SUP-0006", "PreferredSupplierRiskLevel": "Medium", "AvgLeadTime": 20, "OrderTimingStatus": "ORDER NOW", "OrderTimingGap": -2, "MonthsSinceLastReceipt": 1}, {"ItemCode": "ITM-0001", "ItemName": "پیچ و مهره", "CategoryCode": "یراق", "Criticality": "B", "AvailableStock": 904, "StockStatus": "GOOD", "OrderRecommendation": "OK", "DaysToStockout": 70, "SuggestedOrderQty": 0, "CoverageDays": 70, "AvgDailyDemand": 12, "InventoryHealthStatus": "HEALTHY", "PreferredSupplierCode": "SUP-0001", "PreferredSupplierRiskLevel": "Low", "AvgLeadTime": 10, "OrderTimingStatus": "SAFE", "MonthsSinceLastReceipt": 1}, {"ItemCode": "ITM-0089", "ItemName": "کیت اورهال کمپرسور", "CategoryCode": "قطعات مکانیکی", "Criticality": "B", "AvailableStock": 50, "StockStatus": "GOOD", "OrderRecommendation": "OK", "DaysToStockout": 400, "SuggestedOrderQty": 0, "CoverageDays": 400, "AvgDailyDemand": 0.1, "InventoryHealthStatus": "DEAD", "DeadStockFlag": true, "PreferredSupplierCode": "SUP-0003", "PreferredSupplierRiskLevel": "Medium", "AvgLeadTime": 20, "OrderTimingStatus": "SAFE", "MonthsSinceLastReceipt": 18}, {"ItemCode": "ITM-0040", "ItemName": "فیلتر روغن", "CategoryCode": "مصرفی", "Criticality": "C", "AvailableStock": 400, "StockStatus": "GOOD", "OrderRecommendation": "OK", "DaysToStockout": 400, "SuggestedOrderQty": 0, "CoverageDays": 400, "AvgDailyDemand": 1, "InventoryHealthStatus": "SLOW", "SlowMovingFlag": true, "PreferredSupplierCode": "SUP-0012", "PreferredSupplierRiskLevel": "High", "AvgLeadTime": 12, "MonthsSinceLastReceipt": 14}], "suppliers": [{"SupplierCode": "SUP-0006", "SupplierName": "روغن‌سازی سپاهان", "ItemCode": "ITM-0002", "TotalDeliveries": 20, "LateDeliveries": 5, "AvgDelayDays": 2, "DelayRate": 0.25, "SupplierRiskLevel": "Medium", "Preferred": true}, {"SupplierCode": "SUP-0012", "SupplierName": "تجهیزات برق آبادان", "ItemCode": "ITM-0006", "TotalDeliveries": 10, "LateDeliveries": 8, "AvgDelayDays": 8, "DelayRate": 0.8, "SupplierRiskLevel": "High", "Preferred": false}, {"SupplierCode": "SUP-0012", "SupplierName": "تجهیزات برق آبادان", "ItemCode": "ITM-0040", "TotalDeliveries": 10, "LateDeliveries": 8, "AvgDelayDays": 8, "DelayRate": 0.8, "SupplierRiskLevel": "High", "Preferred": false}, {"SupplierCode": "SUP-0001", "SupplierName": "پیچ‌سازان اهواز", "ItemCode": "ITM-0001", "TotalDeliveries": 40, "LateDeliveries": 2, "AvgDelayDays": 0.5, "DelayRate": 0.05, "SupplierRiskLevel": "Low", "Preferred": true}], "values": [{"ItemCode": "ITM-0002", "LatestUnitCost": 5000000, "InventoryValue": 85000000, "TurnoverRatio": 2.1, "HealthScore": 40}, {"ItemCode": "ITM-0006", "LatestUnitCost": 12000000, "InventoryValue": 168000000, "TurnoverRatio": 0.9, "HealthScore": 55}, {"ItemCode": "ITM-0007", "LatestUnitCost": 8000000, "InventoryValue": 40000000, "TurnoverRatio": 1.5, "HealthScore": 50}, {"ItemCode": "ITM-0001", "LatestUnitCost": 50000, "InventoryValue": 45200000, "TurnoverRatio": 3.5, "HealthScore": 82}, {"ItemCode": "ITM-0089", "LatestUnitCost": 53500000, "InventoryValue": 2675000000, "TurnoverRatio": 0.2, "HealthScore": 25}, {"ItemCode": "ITM-0040", "LatestUnitCost": 800000, "InventoryValue": 320000000, "TurnoverRatio": 0.5, "HealthScore": 48}]};
 var TIPS={
-  critical:"کالاهایی که وضعیت موجودی‌شان CRITICAL است — خطر کمبود نزدیک.",
-  orderToday:"کالاهایی که سامانه هوشمند می‌گوید امروز باید سفارش خرید ثبت شود و مقدار پیشنهادی > ۰ است.",
-  warning:"کالا با وضعیت WARNING که هنوز در «سفارش امروز» نیستند.",
-  totalVal:"مجموع ارزش ریالی موجودی (آخرین قیمت × موجودی).",
-  costAll:"جمع (مقدار سفارش پیشنهادی × آخرین قیمت) برای رسیدن به سطح سفارش پیشنهادی سامانه هوشمند. واحد: ریال.",
-  costToday:"هزینه ریالی فقط برای کالاهایی که باید امروز سفارش شوند.",
-  healthPct:"میانگین امتیاز سلامت (۰–۱۰۰). بالاتر = پرتفوی سالم‌تر.",
-  turnover:"میانگین نرخ گردش موجودی. بالاتر یعنی سرمایه سریع‌تر می‌چرخد.",
-  deadVal:"ارزش ریالی و درصد از کل برای کالاهای راکد و کم‌گردش.",
+  critical:"کالاهایی که همین امروز با کمبود مواجه‌ایم (وضعیت موجودی CRITICAL).",
+  orderToday:"کالاهای بحرانی به‌اضافه کالاهایی که اگر امروز سفارش نشوند، با توجه به زمان تأمین (Lead Time) به کمبود می‌خوریم. مقدار سفارش باید بزرگ‌تر از صفر باشد.",
+  warningStatus:"هشدار (WARNING): موجودی هنوز تمام نشده ولی به نقطه سفارش نزدیک شده — باید برنامه‌ریزی تأمین شود، نه لزوماً اقدام اضطراری امروز.",
+  totalVal:"مجموع ارزش ریالی موجودی.",
+  costAll:"جمع مقدار سفارش پیشنهادی × آخرین قیمت برای همه پیشنهادهای سامانه هوشمند. واحد: ریال.",
+  costToday:"هزینه ریالی سفارش‌هایی که باید امروز ثبت شوند.",
+  healthPct:"میانگین امتیاز سلامت ۰ تا ۱۰۰.",
+  turnover:"میانگین نرخ گردش موجودی.",
+  deadVal:"ارزش ریالی کالاهای راکد و کم‌گردش و درصد از کل موجودی.",
   riskSupPct:"درصد کالاهایی که تأمین‌کننده ترجیحی‌شان پرریسک است.",
-  critLevel:"اهمیت کالا در کارخانه: A حیاتی، B مهم، C عادی — غیر از وضعیت موجودی.",
-  timingGap:"فاصله تا روز بهینه سفارش (روز). منفی = سفارش از موعد عقب است.",
-  coverage:"روزهایی که موجودی فعلی با مصرف کنونی دوام می‌آورد.",
+  critLevel:"اهمیت کالا: A حیاتی، B مهم، C عادی.",
+  timingGap:"فاصله تا روز بهینه سفارش. منفی = از موعد عقب است.",
+  coverage:"روز دوام موجودی با مصرف فعلی.",
   lead:"میانگین روز از سفارش تا تحویل.",
   dts:"روز تا اتمام موجودی.",
   unitCost:"آخرین قیمت خرید واحد به ریال.",
-  shortCover:"پوشش موجودی کوتاه‌تر از زمان تأمین — موجودی زودتر از رسیدن سفارش تمام می‌شود.",
-  overstock:"موجودی بیش از حدود یک سال مصرف یا پرچم مازاد — پول قفل‌شده.",
-  healthPlan:"اقدامات پیشنهادی برای نزدیک شدن سلامت پرتفوی به ۱۰۰٪."
+  shortCover:"پوشش کوتاه‌تر از زمان تأمین.",
+  overstock:"فقط کالاهایی که موجودی‌شان بیش از یک سال دوام دارد (پوشش ≥ ۳۶۵ روز یا بیش از ۱۲ ماه از آخرین رسید بدون گردش مناسب).",
+  healthPlan:"اقدامات پیشنهادی برای بهبود سلامت پرتفوی."
 };
 
 var ITEMS=[],SUPPLIERS=[],VALUES=[],VALMAP={},LIVE=false,GEN=null,MODE="ops",TAB="today",FILTERS={},chosenLock=null;
+var SHARE={title:"",text:"",rows:[]};
 
 function n(v){return(v==null||v===""||isNaN(Number(v)))?0:Number(v)}
 function fmt(v,d){d=d||0;if(v==null||isNaN(v))return"—";return Number(v).toLocaleString("en-US",{maximumFractionDigits:d})}
@@ -223,23 +241,20 @@ function saveTheme(t){try{localStorage.setItem(LS_THEME,t)}catch(e){}document.do
 loadTheme();
 
 function mapItem(r){
-  return{code:r.ItemCode||"",name:r.ItemName||"—",cat:r.CategoryCode||"",sub:r.SubCategoryCode||"",
-    crit:r.Criticality||"",stock:n(r.AvailableStock!=null?r.AvailableStock:r.TotalStock),
-    coverage:n(r.CoverageDays),dts:n(r.DaysToStockout),
+  return{code:r.ItemCode||"",name:r.ItemName||"—",cat:r.CategoryCode||"",crit:r.Criticality||"",
+    stock:n(r.AvailableStock!=null?r.AvailableStock:r.TotalStock),coverage:n(r.CoverageDays),dts:n(r.DaysToStockout),
     stockStatus:String(r.StockStatus||"GOOD").toUpperCase(),rec:String(r.OrderRecommendation||"OK").toUpperCase(),
     urgency:String(r.UrgencyLevel||"LOW").toUpperCase(),qty:n(r.SuggestedOrderQty),
     timing:String(r.OrderTimingStatus||"").toUpperCase(),gap:n(r.OrderTimingGap),
     health:String(r.InventoryHealthStatus||"HEALTHY").toUpperCase(),
     dead:!!(r.DeadStockFlag===true||r.DeadStockFlag===1||String(r.DeadStockFlag).toLowerCase()==="true"),
     slow:!!(r.SlowMovingFlag===true||r.SlowMovingFlag===1||String(r.SlowMovingFlag).toLowerCase()==="true"),
-    action:!!(r.ActionFlag===true||r.ActionFlag===1),
-    daily:n(r.AvgDailyDemand),monthly:n(r.AvgMonthlyDemand),monthsReceipt:n(r.MonthsSinceLastReceipt),
-    safety:n(r.SafetyStock),reorder:n(r.ReorderPoint),avgLead:n(r.AvgLeadTime),
-    forecast:r.ForecastStockoutDate||"",optimal:r.OptimalOrderDay||"",
+    daily:n(r.AvgDailyDemand),monthsReceipt:n(r.MonthsSinceLastReceipt),
+    avgLead:n(r.AvgLeadTime),optimal:r.OptimalOrderDay||"",
     prefSup:r.PreferredSupplierCode||"",prefRisk:String(r.PreferredSupplierRiskLevel||"")};
 }
-function mapSup(s){return{code:s.SupplierCode||"",name:s.SupplierName||"—",itemCode:s.ItemCode||"",deliveries:n(s.TotalDeliveries),late:n(s.LateDeliveries),avgDelay:n(s.AvgDelayDays),delayRate:n(s.DelayRate),risk:String(s.SupplierRiskLevel||"Low"),preferred:!!(s.Preferred===true||s.Preferred===1)}}
-function mapVal(v){return{code:v.ItemCode||"",value:n(v.InventoryValue),turnover:n(v.TurnoverRatio),healthScore:n(v.HealthScore),unitCost:n(v.LatestUnitCost),overstock:!!(v.OverstockFlag===true||v.OverstockFlag===1||String(v.OverstockFlag).toUpperCase()==="TRUE")}}
+function mapSup(s){return{code:s.SupplierCode||"",name:s.SupplierName||"—",itemCode:s.ItemCode||"",avgDelay:n(s.AvgDelayDays),delayRate:n(s.DelayRate),risk:String(s.SupplierRiskLevel||"Low"),preferred:!!(s.Preferred===true||s.Preferred===1)}}
+function mapVal(v){return{code:v.ItemCode||"",value:n(v.InventoryValue),turnover:n(v.TurnoverRatio),healthScore:n(v.HealthScore),unitCost:n(v.LatestUnitCost)}}
 function normalize(raw){
   ITEMS=(raw.items||[]).map(mapItem).filter(function(i){return i.code});
   SUPPLIERS=(raw.suppliers||[]).map(mapSup).filter(function(s){return s.code});
@@ -250,7 +265,6 @@ function unitCost(i){var v=VALMAP[i.code];return v?v.unitCost:0}
 function invValue(i){var v=VALMAP[i.code];return v?v.value:0}
 function healthScore(i){var v=VALMAP[i.code];return v&&v.healthScore?v.healthScore:null}
 function turnover(i){var v=VALMAP[i.code];return v?v.turnover:0}
-function isOverYear(i){return i.monthsReceipt>=12||(VALMAP[i.code]&&VALMAP[i.code].overstock)||(i.coverage>=365)}
 
 function filtered(){return ITEMS.filter(function(i){
   if(FILTERS.cat&&i.cat!==FILTERS.cat)return false;
@@ -261,65 +275,113 @@ function filtered(){return ITEMS.filter(function(i){
   return true;
 })}
 
+/* Rules */
 function isCritical(i){return i.stockStatus==="CRITICAL"}
-function isWarning(i){return i.stockStatus==="WARNING"}
+/** سفارش امروز: بحرانی با نیاز سفارش، یا باید امروز سفارش شود وگرنه با Lead Time کمبود می‌شود */
 function isOrderToday(i){
+  if(isCritical(i)){
+    if(i.qty>0||i.rec==="ORDER"||i.timing.indexOf("ORDER NOW")>=0)return true;
+    return true; /* کمبود امروز — در لیست سفارش امروز هم می‌آید */
+  }
   if(i.qty<=0)return false;
   if(i.timing.indexOf("ORDER NOW")>=0)return true;
-  if(i.rec==="ORDER"&&i.dts>0&&i.dts<=45)return true;
-  if(i.rec==="ORDER"&&isCritical(i))return true;
-  if(i.gap<0&&i.qty>0&&i.dts<=45)return true;
+  if(i.gap<0)return true;
+  /* اگر پوشش ≤ lead time و پیشنهاد سفارش هست → امروز لازم است */
+  if(i.avgLead>0&&i.coverage>0&&i.coverage<=i.avgLead&&i.rec==="ORDER")return true;
+  if(i.rec==="ORDER"&&i.dts>0&&i.dts<=i.avgLead+7)return true;
   return false;
 }
-function isWarningOnly(i){return isWarning(i)&&!isOrderToday(i)}
-function isUrgentToday(i){
-  if(isCritical(i))return true;
-  if(i.gap<0&&(i.qty>0||isCritical(i)||isWarning(i)))return true;
-  if(isOrderToday(i)&&i.dts<=7)return true;
-  return false;
-}
+function isOverOneYear(i){return i.coverage>=365||i.dts>=365||i.monthsReceipt>=12}
+function isHighRiskSup(i){return/high|crit/i.test(i.prefRisk)}
 function inMonthActions(i){
   if(isOrderToday(i))return true;
-  if(isCritical(i)&&(i.qty>0||i.dts<=45))return true;
-  if(isWarning(i)&&i.dts<=45)return true;
+  if(i.qty>0&&i.dts>0&&i.dts<=30)return true;
+  if(i.stockStatus==="WARNING"&&i.dts<=30)return true;
   if(i.rec==="ORDER"&&i.qty>0&&i.dts<=45)return true;
-  if(i.gap<0&&i.qty>0&&i.dts<=45)return true;
-  if(i.dts>0&&i.dts<=30&&i.qty>0)return true;
-  if(i.qty<=0&&i.dts>45)return false;
   return false;
 }
-function actionPriority(i){
-  var base=40;
-  if(isCritical(i)||i.timing.indexOf("ORDER NOW")>=0||i.gap<0)base=10;
-  else if(isOrderToday(i))base=15;
-  else if(i.dts<=7)base=18;
-  else if(i.dts<=30||isWarning(i))base=25;
-  var cw=i.crit==="A"?0:i.crit==="B"?5:12;
-  return base+cw+Math.min(i.dts||40,40)/20;
+function actionMeta(i){
+  var problem="",action="";
+  if(isCritical(i)){problem="کمبود / موجودی بحرانی همین امروز";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))+" واحد"):"تأمین فوری"}
+  else if(i.gap<0){problem="فرصت سفارش گذشته ("+fmt(Math.abs(Math.round(i.gap)))+" روز)";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))):"بازبینی"}
+  else if(i.timing.indexOf("ORDER NOW")>=0){problem="زمان‌بندی: سفارش امروز";action="ثبت سفارش "+fmt(Math.round(i.qty))}
+  else if(i.avgLead>0&&i.coverage<=i.avgLead){problem="پوشش ≤ زمان تأمین — خطر کمبود";action="سفارش "+fmt(Math.round(i.qty))}
+  else if(i.dts<=30){problem="اتمام طی "+fmt(i.dts,0)+" روز";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))):"پایش"}
+  else{problem="نیاز به سفارش";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))):"بررسی"}
+  return{problem:problem,action:action};
 }
-function buildActions(list,pred){
+function buildList(list,pred){
   var out=[];
   list.forEach(function(i){
     if(pred&&!pred(i))return;
-    var p=actionPriority(i);
-    var problem="",action="";
-    if(isCritical(i)){problem="موجودی بحرانی";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))+" واحد"):"تأمین فوری"}
-    else if(i.gap<0){problem="فرصت سفارش گذشته ("+fmt(Math.abs(Math.round(i.gap)))+" روز)";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))):"بازبینی فوری"}
-    else if(i.timing.indexOf("ORDER NOW")>=0){problem="سفارش امروز";action="ثبت سفارش "+fmt(Math.round(i.qty))}
-    else if(i.dts<=7){problem="اتمام ≤۷ روز";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))):"پایش"}
-    else if(isWarning(i)||i.dts<=30){problem="افق یک‌ماهه / هشدار";action=i.qty>0?("برنامه سفارش "+fmt(Math.round(i.qty))):"پایش نقطه سفارش"}
-    else{problem="نیاز به پیگیری";action=i.qty>0?("سفارش "+fmt(Math.round(i.qty))):"بررسی"}
-    var o={};for(var k in i)o[k]=i[k];o._p=p;o._problem=problem;o._action=action;out.push(o);
+    var m=actionMeta(i);
+    var o={};for(var k in i)o[k]=i[k];
+    o._problem=m.problem;o._action=m.action;
+    o._p=isCritical(i)?5:(i.gap<0?8:(i.dts||99));
+    out.push(o);
   });
-  out.sort(function(a,b){return a._p-b._p||a.dts-b.dts});
+  out.sort(function(a,b){return a._p-b._p||a.dts-b.dts||a.stock-b.stock});
   return out;
 }
-function orderCost(items){return items.reduce(function(s,i){return s+i.qty*unitCost(i)},0)}
-function isHighRiskSup(i){return/high|crit/i.test(i.prefRisk)}
+function orderCost(items){return items.reduce(function(s,i){return s+(i.qty||0)*unitCost(i)},0)}
 function labStatus(s){return({CRITICAL:"بحرانی",WARNING:"هشدار",GOOD:"سالم"})[s]||s||"—"}
 function labHealth(h){return({HEALTHY:"سالم",SLOW:"کم‌گردش",DEAD:"راکد"})[h]||h||"—"}
 function labCrit(c){return({A:"A حیاتی",B:"B مهم",C:"C عادی"})[c]||(c||"—")}
 function sev(s){s=String(s||"").toUpperCase();if(/CRIT|HIGH|DEAD/.test(s))return"c";if(/WARN|MED|SLOW/.test(s))return"h";if(/GOOD|HEALTHY|LOW/.test(s))return"g";return"i"}
+
+/* Share / Print */
+function itemsToText(title,rows){
+  var lines=[title,"تاریخ: "+toJalali(GEN||new Date().toISOString()),"پتروشیمی آبادان","—"];
+  rows.forEach(function(i,idx){
+    lines.push((idx+1)+". "+i.name+" ("+i.code+")");
+    lines.push("   وضعیت: "+labStatus(i.stockStatus)+" | موجودی: "+fmt(Math.round(i.stock))+" | روز تا اتمام: "+fmt(i.dts,1));
+    if(i.qty)lines.push("   سفارش پیشنهادی: "+fmt(Math.round(i.qty)));
+    if(i._problem)lines.push("   "+i._problem+" → "+(i._action||""));
+    if(invValue(i))lines.push("   ارزش: "+rial(invValue(i)));
+    lines.push("");
+  });
+  if(!rows.length)lines.push("موردی نیست.");
+  return lines.join("\n");
+}
+function itemsToPrintHtml(title,rows){
+  var h='<h1>'+esc(title)+'</h1><div class="meta">پتروشیمی آبادان · '+toJalali(GEN||new Date().toISOString())+" · "+rows.length+" مورد</div>";
+  h+='<table><thead><tr><th>ردیف</th><th>کالا</th><th>کد</th><th>وضعیت</th><th>موجودی</th><th>روز تا اتمام</th><th>سفارش</th><th>اقدام</th></tr></thead><tbody>';
+  rows.forEach(function(i,idx){
+    h+="<tr><td>"+(idx+1)+"</td><td>"+esc(i.name)+"</td><td>"+esc(i.code)+"</td><td>"+labStatus(i.stockStatus)+"</td><td>"+fmt(Math.round(i.stock))+"</td><td>"+fmt(i.dts,1)+"</td><td>"+fmt(Math.round(i.qty||0))+"</td><td>"+esc(i._action||i._problem||"—")+"</td></tr>";
+  });
+  h+="</tbody></table>";
+  return h;
+}
+function openShare(title,rows){
+  SHARE={title:title,rows:rows,text:itemsToText(title,rows)};
+  document.getElementById("shareTitle").textContent=title;
+  document.getElementById("shareSub").textContent=rows.length+" مورد · چاپ، PDF، اشتراک یا کپی";
+  document.getElementById("shareModal").classList.add("on");
+}
+function doPrint(){
+  document.getElementById("printArea").innerHTML=itemsToPrintHtml(SHARE.title,SHARE.rows);
+  document.getElementById("shareModal").classList.remove("on");
+  setTimeout(function(){window.print()},100);
+}
+function doShare(){
+  if(navigator.share){
+    navigator.share({title:SHARE.title,text:SHARE.text}).catch(function(){});
+  }else{
+    doCopy();
+    alert("اشتراک سیستم در دسترس نیست. متن در کلیپ‌بورد کپی شد — در پیام‌رسان یا ایمیل بچسبانید.");
+  }
+}
+function doCopy(){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(SHARE.text).then(function(){alert("متن کپی شد.")}).catch(function(){fallbackCopy()});
+  }else fallbackCopy();
+}
+function fallbackCopy(){
+  var ta=document.createElement("textarea");ta.value=SHARE.text;document.body.appendChild(ta);ta.select();
+  try{document.execCommand("copy");alert("متن کپی شد.")}catch(e){alert("کپی ممکن نشد.")}
+  document.body.removeChild(ta);
+}
+window.openShare=openShare;
 
 function openItem(code){
   var i=null;for(var x=0;x<ITEMS.length;x++)if(ITEMS[x].code===code){i=ITEMS[x];break}if(!i)return;
@@ -327,64 +389,53 @@ function openItem(code){
   document.getElementById("dTitle").textContent=i.name;
   document.getElementById("dSub").textContent=i.code+" · "+(i.cat||"");
   function f(l,val,tk){return'<div class="f"><div class="lb">'+(tk?tip(l,tk):esc(l))+'</div><div class="vl">'+val+"</div></div>"}
-  document.getElementById("dBody").innerHTML='<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">'+
-    '<span class="chip '+sev(i.stockStatus)+'">'+labStatus(i.stockStatus)+'</span><span class="chip i">'+tip(labCrit(i.crit),"critLevel")+"</span></div><div class=\"df\">"+
+  document.getElementById("dBody").innerHTML='<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px"><span class="chip '+sev(i.stockStatus)+'">'+labStatus(i.stockStatus)+"</span></div><div class=\"df\">"+
     f("موجودی",fmt(Math.round(i.stock)))+f("پوشش",fmt(i.coverage,1),"coverage")+f("روز تا اتمام",fmt(i.dts,1),"dts")+
-    f("زمان تأمین",fmt(i.avgLead,1),"lead")+f("شکاف زمانی",fmt(i.gap,1),"timingGap")+f("سفارش پیشنهادی",fmt(Math.round(i.qty)))+
-    f("تأمین‌کننده",i.prefSup||"—")+f("ریسک تأمین",i.prefRisk||"—")+f("روز بهینه",toJalali(i.optimal))+
-    (v?f("هزینه واحد",rial(v.unitCost),"unitCost"):"")+(v?f("ارزش",rial(v.value)):"")+(v?f("گردش",fmt(v.turnover,2),"turnover"):"")+
-    (v&&v.healthScore?f("سلامت",fmt(v.healthScore,0),"healthPct"):"")+"</div>";
+    f("زمان تأمین",fmt(i.avgLead,1),"lead")+f("شکاف زمانی",fmt(i.gap,1),"timingGap")+f("سفارش",fmt(Math.round(i.qty)))+
+    f("تأمین‌کننده",i.prefSup||"—")+f("ریسک تأمین",i.prefRisk||"—")+(v?f("هزینه واحد",rial(v.unitCost),"unitCost"):"")+(v?f("ارزش",rial(v.value)):"")+"</div>";
   document.getElementById("drawer").classList.add("on");document.getElementById("drawerBg").classList.add("on");
 }
 function closeDrawer(){document.getElementById("drawer").classList.remove("on");document.getElementById("drawerBg").classList.remove("on")}
 window.openItem=openItem;
 
-function showKpiList(title,sub,rows){
-  document.getElementById("kpiTitle").textContent=title;
-  document.getElementById("kpiSub").textContent=sub||"";
-  document.getElementById("kpiBody").innerHTML=rows.length?rows.map(function(i){
-    return'<div class="act" onclick="openItem(\''+i.code+'\')">'+
-      '<div class="prio">'+(i.crit||"·")+'</div><div><div class="nm">'+esc(i.name)+'</div><div class="mt">'+esc(i.code)+
-      " · "+labStatus(i.stockStatus)+(i.qty?" · سفارش "+fmt(Math.round(i.qty)):"")+(invValue(i)?" · "+rial(invValue(i)):"")+"</div></div>"+
-      '<div class="days '+(i.dts<=7?"bad":i.dts<=30?"warn":"")+'">'+(i.dts?Math.round(i.dts)+"ر":"—")+"</div></div>";
-  }).join(""):'<div class="empty">موردی نیست</div>';
-  document.getElementById("kpiModal").classList.add("on");
-}
-function closeKpi(){document.getElementById("kpiModal").classList.remove("on")}
-window.closeKpi=closeKpi;window.showKpiList=showKpiList;
-
 function actHtml(a){
-  var sc=a._p<18?"c":a._p<30?"h":"";
-  var col=a._p<18?"var(--crit)":a._p<30?"var(--high)":"var(--info)";
+  var sc=isCritical(a)?"c":(a.dts<=14||a.gap<0)?"h":"";
+  var col=sc==="c"?"var(--crit)":sc==="h"?"var(--high)":"var(--info)";
   return'<div class="act '+sc+'" onclick="openItem(\''+a.code+'\')"><div class="prio" style="background:'+col+'22;color:'+col+'">'+(a.crit||"·")+"</div>"+
     "<div><div class=\"nm\">"+esc(a.name)+' <span style="color:var(--mu);font-size:11px">('+esc(a.code)+")</span></div>"+
-    '<div class="mt">'+esc(a._problem)+" → <b>"+esc(a._action)+"</b></div></div>"+
+    '<div class="mt">'+esc(a._problem||"")+" → <b>"+esc(a._action||"")+"</b></div></div>"+
     '<div class="days '+(a.dts<=7?"bad":a.dts<=30?"warn":"")+'">'+(a.dts?Math.round(a.dts)+" روز":"—")+"</div></div>";
 }
+function collapsible(id,title,count,innerHtml,shareRows,shareTitle){
+  return'<div class="coll open" id="coll-'+id+'"><div class="coll-hd" onclick="toggleColl(\''+id+'\')">'+
+    "<span>▾ <span class=\"chev\">◀</span> "+title+(count!=null?" <small style=\"color:var(--mu);font-weight:500\">("+count+")</small>":"")+"</span>"+
+    '<span class="st-actions" onclick="event.stopPropagation()">'+
+      (shareRows?'<button type="button" class="btn-sm primary" onclick="openShare(\''+esc(shareTitle||title)+'\','+shareRows+')">چاپ / اشتراک</button>':'')+
+    "</span></div><div class=\"coll-bd\">"+innerHtml+"</div></div>";
+}
+window.toggleColl=function(id){var el=document.getElementById("coll-"+id);if(el)el.classList.toggle("open")};
 
 function tabsForMode(){
   if(MODE==="ops")return[{id:"today",label:"امروز"},{id:"plan30",label:"اقدامات ۳۰ روز"},{id:"health",label:"سلامت"},{id:"items",label:"کالاها"}];
   return[{id:"overview",label:"خلاصه مدیریتی"},{id:"finance",label:"مالی و سفارش"},{id:"suppliers",label:"تأمین‌کنندگان"},{id:"strategy",label:"ریسک"}];
 }
-
 function renderTabs(){
   var tabs=tabsForMode();
   if(TAB!=="settings"&&!tabs.some(function(t){return t.id===TAB}))TAB=tabs[0].id;
-  var urgent=buildActions(filtered(),isUrgentToday).length;
-  var html=tabs.map(function(t){return'<button type="button" class="tab'+(TAB===t.id?" on":"")+'" data-t="'+t.id+'">'+t.label+(t.id==="today"&&urgent?'<span class="bdg">'+urgent+"</span>":"")+"</button>"}).join("");
+  var n=buildList(filtered(),isOrderToday).length;
+  var html=tabs.map(function(t){return'<button type="button" class="tab'+(TAB===t.id?" on":"")+'" data-t="'+t.id+'">'+t.label+(t.id==="today"&&n?'<span class="bdg">'+n+"</span>":"")+"</button>"}).join("");
   if(TAB==="settings")html+='<button type="button" class="tab on" data-t="settings">تنظیمات</button>';
   document.getElementById("tabs").innerHTML=html;
   Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(b){b.onclick=function(){TAB=b.getAttribute("data-t");renderAll();window.scrollTo(0,0)}});
 }
-
 function renderFilters(){
   var cats=uniq(ITEMS.map(function(i){return i.cat}));
   document.getElementById("filters").innerHTML='<input id="fq" placeholder="جستجو..." value="'+(FILTERS.q||"")+'" style="min-width:120px">'+
     '<label>دسته<select id="fcat"><option value="">همه</option>'+cats.map(function(c){return"<option"+(FILTERS.cat===c?" selected":"")+">"+esc(c)+"</option>"}).join("")+"</select></label>"+
     '<label>'+tip("اهمیت کالا","critLevel")+'<select id="fcrit"><option value="">همه</option><option value="A">A حیاتی</option><option value="B">B مهم</option><option value="C">C عادی</option></select></label>'+
-    '<label>وضعیت موجودی<select id="fstock"><option value="">همه</option><option value="CRITICAL">بحرانی</option><option value="WARNING">هشدار</option><option value="GOOD">سالم</option></select></label>'+
+    '<label>'+tip("وضعیت موجودی","warningStatus")+'<select id="fstock"><option value="">همه</option><option value="CRITICAL">بحرانی (کمبود امروز)</option><option value="WARNING">هشدار (نزدیک نقطه سفارش)</option><option value="GOOD">سالم</option></select></label>'+
     '<label>سلامت<select id="fhealth"><option value="">همه</option><option value="HEALTHY">سالم</option><option value="SLOW">کم‌گردش</option><option value="DEAD">راکد</option></select></label>'+
-    '<button type="button" class="btn" style="background:var(--th);color:var(--tx);border:1px solid var(--bd)" id="fclear">پاک فیلتر</button>';
+    '<button type="button" class="btn-sm" id="fclear">پاک فیلتر</button>';
   if(FILTERS.crit)document.getElementById("fcrit").value=FILTERS.crit;
   if(FILTERS.stock)document.getElementById("fstock").value=FILTERS.stock;
   if(FILTERS.health)document.getElementById("fhealth").value=FILTERS.health;
@@ -393,44 +444,49 @@ function renderFilters(){
   document.getElementById("fclear").onclick=function(){FILTERS={};renderFilters();renderAll()};
 }
 
-/* ===== OPS ===== */
+/* store for share callbacks */
+var STORE={};
+
 function viewToday(list){
-  var crit=list.filter(isCritical),ord=list.filter(isOrderToday),warn=list.filter(isWarningOnly);
-  var urgent=buildActions(list,isUrgentToday);
-  var cls=crit.length>=2||urgent.length>=3?"bad":(crit.length||urgent.length)?"warn":"ok";
-  return'<div class="hint">نمای عملیاتی — موجودی خطرناک و سفارش‌هایی که فرصت‌شان گذشته یا فوری‌اند</div>'+
-    '<div class="banner '+cls+'">'+(cls==="ok"?"وضعیت پایدار":crit.length+" بحرانی · "+ord.length+" سفارش امروز · "+urgent.length+" اقدام فوری")+
-    "<small>آخرین بروزرسانی: "+toJalali(GEN)+"</small></div>"+
+  var crit=list.filter(isCritical);
+  var ord=buildList(list,isOrderToday);
+  STORE.urgent=ord;STORE.crit=crit;
+  return'<div class="sync-line">آخرین بروزرسانی: '+toJalali(GEN)+'</div>'+
+    '<div class="hint">دو کارت جدا: کمبود همین امروز، و سفارش‌هایی که اگر امروز ثبت نشوند با توجه به زمان تأمین به کمبود می‌رسیم.</div>'+
     '<div class="kpi-g">'+
-      '<div class="kpi c" onclick="showKpiList(\'موجودی بحرانی\',TIPS.critical,filtered().filter(isCritical))"><div class="l">'+tip("موجودی بحرانی","critical")+'</div><div class="v">'+crit.length+'</div><div class="go">مشاهده ←</div></div>'+
-      '<div class="kpi h" onclick="showKpiList(\'سفارش امروز\',TIPS.orderToday,filtered().filter(isOrderToday))"><div class="l">'+tip("سفارش امروز","orderToday")+'</div><div class="v">'+ord.length+'</div><div class="go">مشاهده ←</div></div>'+
-      '<div class="kpi m" onclick="showKpiList(\'هشدار موجودی\',TIPS.warning,filtered().filter(isWarningOnly))"><div class="l">'+tip("هشدار موجودی","warning")+'</div><div class="v">'+warn.length+'</div><div class="go">مشاهده ←</div></div>'+
+      '<div class="kpi c" onclick="openShare(\'موجودی بحرانی — کمبود امروز\',STORE.crit)"><div class="l">'+tip("موجودی بحرانی","critical")+'</div><div class="v">'+crit.length+'</div><div class="s">کمبود همین امروز</div><div class="go">لیست / چاپ ←</div></div>'+
+      '<div class="kpi h" onclick="openShare(\'سفارش امروز\',STORE.urgent)"><div class="l">'+tip("سفارش امروز","orderToday")+'</div><div class="v">'+ord.length+'</div><div class="s">بحرانی + جلوگیری از کمبود با Lead Time</div><div class="go">لیست / چاپ ←</div></div>'+
     "</div>"+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> اقدامات فوری امروز</span><small>کمبود یا فرصت سفارش گذشته</small></div>'+
-    (urgent.length?urgent.map(actHtml).join(""):'<div class="empty">مورد فوری نیست</div>')+"</div>";
+    collapsible("urgent","اقدامات فوری امروز (همان سفارش امروز)",ord.length,
+      ord.length?ord.map(actHtml).join(""):'<div class="empty">موردی نیست</div>',
+      "STORE.urgent","اقدامات فوری امروز");
 }
 
 function viewPlan30(list){
-  var acts=buildActions(list,inMonthActions);
+  var acts=buildList(list,inMonthActions);
+  acts.sort(function(a,b){return(a.dts||999)-(b.dts||999)||(a.stock||0)-(b.stock||0)});
+  STORE.plan30=acts;
   var b={d7:0,d30:0,d90:0,more:0};
   list.forEach(function(i){var d=i.dts;if(d>0&&d<=7)b.d7++;else if(d<=30)b.d30++;else if(d<=90)b.d90++;else b.more++});
   var maxb=Math.max(b.d7,b.d30,b.d90,b.more,1);
-  var sorted=list.slice().sort(function(a,b){return(a.dts||999)-(b.dts||999)});
+  var sorted=list.slice().sort(function(a,b){return(a.dts||999)-(b.dts||999)||(a.stock||0)-(b.stock||0)});
+  STORE.allForecast=sorted.map(function(i){var m=actionMeta(i);return Object.assign({},i,{_problem:m.problem,_action:m.action})});
   var rows=sorted.map(function(i){
     return"<tr onclick=\"openItem('"+i.code+"')\"><td class=\"r\"><b>"+esc(i.name)+'</b><div style="font-size:10px;color:var(--mu)">'+esc(i.code)+"</div></td>"+
       '<td class="num" style="font-weight:700;color:'+(i.dts<=7?"var(--crit)":i.dts<=30?"var(--high)":"")+'">'+fmt(i.dts,1)+"</td>"+
       '<td class="num">'+fmt(i.coverage,1)+'</td><td class="num">'+fmt(i.avgLead,1)+'</td><td class="num">'+fmt(Math.round(i.qty))+"</td>"+
       '<td><span class="chip '+sev(i.timing)+'">'+(i.timing||"—")+"</span></td></tr>";
   }).join("");
-  return'<div class="hint">اقدامات مورد نیاز طی یک ماه پیش‌رو + افق اتمام و جدول پیش‌بینی همه کالاها</div>'+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> لیست اقدامات ۳۰ روز</span><small>'+acts.length+' مورد</small></div>'+
-    (acts.length?acts.map(actHtml).join(""):'<div class="empty">موردی در افق ۳۰ روز نیست</div>')+"</div>"+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> افق اتمام موجودی</span></div>'+
-    [["تا ۷ روز",b.d7,"r"],["۸ تا ۳۰ روز",b.d30,"o"],["۳۱ تا ۹۰ روز",b.d90,"b"],["بیش از ۹۰ روز",b.more,"g"]].map(function(x){
-      return'<div class="bar-r"><div class="bar-n">'+x[0]+'</div><div class="bar-t"><div class="bar-f '+x[2]+'" style="width:'+(x[1]/maxb*100)+'%"></div></div><b>'+x[1]+"</b></div>";
-    }).join("")+"</div>"+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> جدول پیش‌بینی همه کالاها</span></div>'+
-    '<div class="tbl-w"><table><thead><tr><th class="r">کالا</th><th>'+tip("روز تا اتمام","dts")+'</th><th>'+tip("پوشش","coverage")+'</th><th>'+tip("زمان تأمین","lead")+'</th><th>سفارش</th><th>زمان‌بندی</th></tr></thead><tbody>'+rows+"</tbody></table></div></div>";
+  return'<div class="sync-line">آخرین بروزرسانی: '+toJalali(GEN)+'</div>'+
+    collapsible("p30","اقدامات مورد نیاز طی یک ماه پیش‌رو",acts.length,
+      acts.length?acts.map(actHtml).join(""):'<div class="empty">موردی نیست</div>',"STORE.plan30","اقدامات ۳۰ روز")+
+    collapsible("horizon","افق اتمام موجودی",null,
+      [["تا ۷ روز",b.d7,"r"],["۸ تا ۳۰ روز",b.d30,"o"],["۳۱ تا ۹۰ روز",b.d90,"b"],["بیش از ۹۰ روز",b.more,"g"]].map(function(x){
+        return'<div class="bar-r"><div class="bar-n">'+x[0]+'</div><div class="bar-t"><div class="bar-f '+x[2]+'" style="width:'+(x[1]/maxb*100)+'%"></div></div><b>'+x[1]+"</b></div>";
+      }).join(""),null,null)+
+    collapsible("forecast","جدول پیش‌بینی همه کالاها",sorted.length,
+      '<div class="tbl-w"><table><thead><tr><th class="r">کالا</th><th>'+tip("روز تا اتمام","dts")+'</th><th>'+tip("پوشش","coverage")+'</th><th>'+tip("زمان تأمین","lead")+'</th><th>سفارش</th><th>زمان‌بندی</th></tr></thead><tbody>'+rows+"</tbody></table></div>",
+      "STORE.allForecast","جدول پیش‌بینی کالاها");
 }
 
 function viewHealth(list){
@@ -438,95 +494,93 @@ function viewHealth(list){
   var pct=list.length?Math.round(healthy/list.length*100):0;
   var st={};list.forEach(function(i){st[i.stockStatus]=(st[i.stockStatus]||0)+1});
   var maxs=Math.max(st.CRITICAL||0,st.WARNING||0,st.GOOD||0,1);
-  return'<div class="two"><div class="panel"><div class="st"><span><span class="dot"></span> سهم کالاهای سالم</span></div>'+
+  return'<div class="hint">'+tip("معنی وضعیت هشدار","warningStatus")+"</div>"+
+    '<div class="two"><div class="panel"><div class="st"><span><span class="dot"></span> سهم کالاهای سالم</span></div>'+
     '<div class="gauge" style="background:conic-gradient('+(pct>=70?"var(--good)":pct>=40?"var(--med)":"var(--crit)")+" "+(pct*3.6)+'deg,var(--track) 0)"><span>'+pct+"٪</span></div>"+
     '<div style="text-align:center;margin-top:8px;font-size:12px;color:var(--mu)">'+healthy+" از "+list.length+"</div></div>"+
     '<div class="panel"><div class="st"><span><span class="dot"></span> توزیع وضعیت موجودی</span></div>'+
-    ["CRITICAL","WARNING","GOOD"].map(function(k){return'<div class="bar-r"><div class="bar-n">'+labStatus(k)+'</div><div class="bar-t"><div class="bar-f '+(k==="CRITICAL"?"r":k==="WARNING"?"o":"g")+'" style="width:'+((st[k]||0)/maxs*100)+'%"></div></div><b>'+(st[k]||0)+"</b></div>"}).join("")+"</div></div>";
+    ["CRITICAL","WARNING","GOOD"].map(function(k){return'<div class="bar-r"><div class="bar-n">'+(k==="WARNING"?tip("هشدار","warningStatus"):labStatus(k))+'</div><div class="bar-t"><div class="bar-f '+(k==="CRITICAL"?"r":k==="WARNING"?"o":"g")+'" style="width:'+((st[k]||0)/maxs*100)+'%"></div></div><b>'+(st[k]||0)+"</b></div>"}).join("")+"</div></div>";
 }
 
 function viewItems(list){
-  var rows=list.map(function(i){return"<tr onclick=\"openItem('"+i.code+"')\"><td class=\"r\"><b>"+esc(i.name)+'</b><div style="font-size:10px;color:var(--mu)">'+esc(i.code)+"</div></td><td class=\"r\">"+(i.cat||"—")+'</td><td class="num">'+fmt(Math.round(i.stock))+'</td><td class="num">'+fmt(i.daily,2)+'</td><td><span class="chip '+sev(i.stockStatus)+'">'+labStatus(i.stockStatus)+"</span></td><td><span class=\"chip i\">"+labCrit(i.crit)+"</span></td></tr>"}).join("");
-  return'<div class="panel"><div class="tbl-w"><table><thead><tr><th class="r">کالا</th><th class="r">دسته</th><th>موجودی</th><th>مصرف روزانه</th><th>وضعیت</th><th>'+tip("اهمیت","critLevel")+'</th></tr></thead><tbody>'+rows+"</tbody></table></div></div>";
-}
-
-/* ===== MGMT ===== */
-function healthPlanHtml(list){
-  var plans=[];
-  var dead=list.filter(function(i){return i.dead||i.health==="DEAD"});
-  var slow=list.filter(function(i){return i.slow||i.health==="SLOW"});
-  var buy=list.filter(function(i){return i.qty>0});
-  var risk=list.filter(isHighRiskSup);
-  var crit=list.filter(isCritical);
-  if(crit.length)plans.push({t:"رفع کمبود بحرانی",d:crit.length+" کالا در وضعیت CRITICAL — اولویت تأمین و ثبت سفارش."});
-  if(buy.length)plans.push({t:"اجرای خریدهای پیشنهادی",d:"هزینه تقریبی "+rial(orderCost(buy))+" برای "+buy.length+" قلم با سفارش پیشنهادی."});
-  if(dead.length)plans.push({t:"تعیین تکلیف کالای راکد",d:dead.length+" قلم راکد — اسقاط، انتقال، یا مصرف برنامه‌ریزی‌شده."});
-  if(slow.length)plans.push({t:"کاهش کم‌گردش",d:slow.length+" قلم کم‌گردش — بازبینی حداقل موجودی و تقاضا."});
-  if(risk.length)plans.push({t:"بهبود تأمین پرریسک",d:risk.length+" کالا با تأمین‌کننده پرریسک — یافتن جایگزین مناسب‌تر."});
-  if(!plans.length)plans.push({t:"حفظ وضعیت",d:"اقدام اضطراری خاصی از داده فعلی استخراج نشد."});
-  return'<div class="panel"><div class="st"><span><span class="dot"></span> '+tip("مسیر رسیدن به سلامت بهتر","healthPlan")+'</span></div>'+
-    plans.map(function(p){return'<div class="plan"><b>'+p.t+"</b><div style=\"font-size:12.5px;color:var(--mu);margin-top:4px\">"+p.d+"</div></div>"}).join("")+"</div>";
+  var rows=list.map(function(i){return"<tr onclick=\"openItem('"+i.code+"')\"><td class=\"r\"><b>"+esc(i.name)+'</b><div style="font-size:10px;color:var(--mu)">'+esc(i.code)+"</div></td><td class=\"r\">"+(i.cat||"—")+'</td><td class="num">'+fmt(Math.round(i.stock))+'</td><td class="num">'+fmt(i.daily,2)+'</td><td><span class="chip '+sev(i.stockStatus)+'">'+labStatus(i.stockStatus)+"</span></td></tr>"}).join("");
+  return'<div class="panel"><div class="tbl-w"><table><thead><tr><th class="r">کالا</th><th class="r">دسته</th><th>موجودی</th><th>مصرف روزانه</th><th>وضعیت</th></tr></thead><tbody>'+rows+"</tbody></table></div></div>";
 }
 
 function viewOverviewMgmt(list){
   var totalVal=list.reduce(function(s,i){return s+invValue(i)},0);
   var deadList=list.filter(function(i){return i.dead||i.slow||i.health==="DEAD"||i.health==="SLOW"});
+  deadList.forEach(function(i){i._problem=labHealth(i.health);i._action=rial(invValue(i))});
+  STORE.dead=deadList;
   var deadVal=deadList.reduce(function(s,i){return s+invValue(i)},0);
   var deadPct=totalVal?deadVal/totalVal*100:0;
   var scores=[],turns=[];
   list.forEach(function(i){var h=healthScore(i);if(h!=null)scores.push(h);var t=turnover(i);if(t>0)turns.push(t)});
   var avgH=scores.length?scores.reduce(function(a,b){return a+b},0)/scores.length:null;
   var avgTurn=turns.length?turns.reduce(function(a,b){return a+b},0)/turns.length:null;
-  var costAll=orderCost(list.filter(function(i){return i.qty>0}));
-  var costToday=orderCost(list.filter(isOrderToday));
+  var buy=list.filter(function(i){return i.qty>0});
+  buy.forEach(function(i){var m=actionMeta(i);i._problem=m.problem;i._action=m.action+" · "+rial(i.qty*unitCost(i))});
+  STORE.buy=buy;
+  var costAll=orderCost(buy);
+  var today=buildList(list,isOrderToday);STORE.today=today;
+  var costToday=orderCost(today);
   var riskItems=list.filter(isHighRiskSup);
+  riskItems.forEach(function(i){i._problem="تأمین پرریسک: "+(i.prefRisk||"");i._action="جستجوی تأمین‌کننده مناسب‌تر · "+(i.prefSup||"")});
+  STORE.riskSup=riskItems;
   var riskPct=list.length?riskItems.length/list.length*100:0;
-  var shortageRisk=list.filter(function(i){return isCritical(i)||isWarning(i)});
-  return'<div class="hint">خلاصه مدیریتی — سرمایه، هزینه تأمین پیشنهادی، سلامت و ریسک تأمین</div>'+
-    (!VALUES.length?'<div class="msg">جدول values ناقص است؛ اعداد مالی ممکن است صفر باشند.</div>':'')+
+  var crit=list.filter(isCritical);crit.forEach(function(i){var m=actionMeta(i);i._problem=m.problem;i._action=m.action});STORE.critM=crit;
+  var deadOnly=list.filter(function(i){return i.dead||i.health==="DEAD"});deadOnly.forEach(function(i){i._problem="راکد";i._action="تعیین تکلیف"});STORE.deadOnly=deadOnly;
+  var slowOnly=list.filter(function(i){return i.slow||i.health==="SLOW"});slowOnly.forEach(function(i){i._problem="کم‌گردش";i._action="بازبینی حداقل موجودی"});STORE.slowOnly=slowOnly;
+  var shortageRisk=list.filter(function(i){return isCritical(i)||i.stockStatus==="WARNING"});
+  shortageRisk.forEach(function(i){var m=actionMeta(i);i._problem=labStatus(i.stockStatus);i._action=m.action});STORE.shortage=shortageRisk;
+
+  var planBlocks=
+    collapsible("hp-crit","رفع کمبود بحرانی",crit.length,crit.length?crit.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.critM","رفع کمبود بحرانی")+
+    collapsible("hp-buy","اجرای خریدهای پیشنهادی — "+rial(costAll),buy.length,buy.length?buy.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.buy","خریدهای پیشنهادی")+
+    collapsible("hp-dead","تعیین تکلیف کالای راکد",deadOnly.length,deadOnly.length?deadOnly.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.deadOnly","کالای راکد")+
+    collapsible("hp-slow","کاهش کم‌گردش",slowOnly.length,slowOnly.length?slowOnly.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.slowOnly","کم‌گردش")+
+    collapsible("hp-risk","بهبود تأمین پرریسک",riskItems.length,riskItems.length?riskItems.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.riskSup","تأمین پرریسک");
+
+  STORE.planAll=[].concat(crit,buy,deadOnly,slowOnly,riskItems);
+
+  return'<div class="sync-line">آخرین بروزرسانی: '+toJalali(GEN)+'</div>'+
+    (!VALUES.length?'<div class="msg">جدول values ناقص است.</div>':'')+
     '<div class="kpi-g">'+
       '<div class="kpi i"><div class="l">'+tip("ارزش کل موجودی","totalVal")+'</div><div class="v" style="font-size:15px">'+rial(totalVal)+'</div></div>'+
-      '<div class="kpi h" onclick="showKpiList(\'سفارش‌های پیشنهادی\',TIPS.costAll,filtered().filter(function(i){return i.qty>0}))"><div class="l">'+tip("هزینه سفارش‌های پیشنهادی","costAll")+'</div><div class="v" style="font-size:15px">'+rial(costAll)+'</div><div class="s">تا سطح پیشنهاد سامانه</div><div class="go">جزئیات ←</div></div>'+
-      '<div class="kpi c" onclick="showKpiList(\'سفارش امروز\',TIPS.costToday,filtered().filter(isOrderToday))"><div class="l">'+tip("هزینه سفارش امروز","costToday")+'</div><div class="v" style="font-size:15px">'+rial(costToday)+'</div><div class="go">جزئیات ←</div></div>'+
+      '<div class="kpi h" onclick="openShare(\'هزینه سفارش‌های پیشنهادی\',STORE.buy)"><div class="l">'+tip("هزینه سفارش‌های پیشنهادی","costAll")+'</div><div class="v" style="font-size:15px">'+rial(costAll)+'</div><div class="go">لیست / چاپ ←</div></div>'+
+      '<div class="kpi c" onclick="openShare(\'هزینه سفارش امروز\',STORE.today)"><div class="l">'+tip("هزینه سفارش امروز","costToday")+'</div><div class="v" style="font-size:15px">'+rial(costToday)+'</div><div class="go">لیست / چاپ ←</div></div>'+
       '<div class="kpi g"><div class="l">'+tip("٪ سلامت پرتفوی","healthPct")+'</div><div class="v">'+(avgH!=null?fmt(avgH,0)+"%":"—")+'</div></div>'+
       '<div class="kpi i"><div class="l">'+tip("نرخ گردش سرمایه","turnover")+'</div><div class="v">'+(avgTurn!=null?fmt(avgTurn,2):"—")+'</div></div>'+
-      '<div class="kpi m" onclick="showKpiList(\'خواب سرمایه — راکد و کم‌گردش\',TIPS.deadVal,deadList)"><div class="l">'+tip("خواب سرمایه","deadVal")+'</div><div class="v" style="font-size:15px">'+rial(deadVal)+'</div><div class="s">'+fmt(deadPct,1)+'٪ از کل · قابل چاپ</div><div class="go">لیست و چاپ ←</div></div>'+
-      '<div class="kpi c" onclick="showKpiList(\'کالا با تأمین پرریسک — جایگزین بیابید\',TIPS.riskSupPct,riskItems)"><div class="l">'+tip("% کالاهای تأمین پرریسک","riskSupPct")+'</div><div class="v">'+fmt(riskPct,0)+'٪</div><div class="s">'+riskItems.length+' کالا · پیشنهاد تعویض تأمین</div><div class="go">لیست ←</div></div>'+
+      '<div class="kpi m" onclick="openShare(\'خواب سرمایه\',STORE.dead)"><div class="l">'+tip("خواب سرمایه","deadVal")+'</div><div class="v" style="font-size:15px">'+rial(deadVal)+'</div><div class="s">'+fmt(deadPct,1)+'٪ از کل</div><div class="go">لیست / چاپ / اشتراک ←</div></div>'+
+      '<div class="kpi c" onclick="openShare(\'کالا با تأمین پرریسک\',STORE.riskSup)"><div class="l">'+tip("% کالاهای تأمین پرریسک","riskSupPct")+'</div><div class="v">'+fmt(riskPct,0)+'٪</div><div class="s">'+riskItems.length+' کالا</div><div class="go">لیست / چاپ / اشتراک ←</div></div>'+
     "</div>"+
-    healthPlanHtml(list)+
-    (function(){
-      var healthy=list.filter(function(i){return i.health==="HEALTHY"}).length;
-      var pct=list.length?Math.round(healthy/list.length*100):0;
-      var st={};list.forEach(function(i){st[i.stockStatus]=(st[i.stockStatus]||0)+1});
-      var maxs=Math.max(st.CRITICAL||0,st.WARNING||0,st.GOOD||0,1);
-      var bars=["CRITICAL","WARNING","GOOD"].map(function(k){return'<div class="bar-r"><div class="bar-n">'+labStatus(k)+'</div><div class="bar-t"><div class="bar-f '+(k==="CRITICAL"?"r":k==="WARNING"?"o":"g")+'" style="width:'+((st[k]||0)/maxs*100)+'%"></div></div><b>'+(st[k]||0)+"</b></div>"}).join("");
-      return'<div class="two"><div class="panel"><div class="st"><span><span class="dot"></span> سهم کالاهای سالم</span></div>'+
-        '<div class="gauge" style="background:conic-gradient('+(pct>=70?"var(--good)":pct>=40?"var(--med)":"var(--crit)")+" "+(pct*3.6)+'deg,var(--track) 0)"><span>'+pct+"٪</span></div>"+
-        '<div style="text-align:center;margin-top:8px;font-size:12px;color:var(--mu)">'+healthy+" از "+list.length+"</div></div>"+
-        '<div class="panel"><div class="st"><span><span class="dot"></span> توزیع وضعیت موجودی</span></div>'+bars+"</div></div>";
-    })()+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> موارد ریسک کمبود</span><small>'+shortageRisk.length+'</small></div>'+
-    (shortageRisk.length?shortageRisk.slice(0,12).map(function(i){return actHtml(Object.assign({},i,{_p:isCritical(i)?10:25,_problem:labStatus(i.stockStatus),_action:i.qty?("سفارش "+fmt(Math.round(i.qty))):"پایش"}))}):'<div class="empty">موردی نیست</div>')+"</div>";
+    '<div class="panel"><div class="st"><span><span class="dot"></span> '+tip("مسیر رسیدن به سلامت بهتر","healthPlan")+'</span>'+
+      '<button type="button" class="btn-sm primary" onclick="openShare(\'کل مسیر سلامت\',STORE.planAll)">چاپ / اشتراک همه</button></div>'+planBlocks+"</div>"+
+    viewHealth(list)+
+    collapsible("shortage","موارد ریسک کمبود",shortageRisk.length,
+      shortageRisk.length?shortageRisk.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.shortage","ریسک کمبود");
 }
 
 function viewFinance(list){
-  var over=list.filter(isOverYear);
+  var over=list.filter(isOverOneYear);
+  over.forEach(function(i){i._problem="موجودی > یک سال";i._action=rial(invValue(i))+" · پوشش "+fmt(i.coverage,0)+" روز"});
+  STORE.over=over;
   var lowT=list.filter(function(i){return turnover(i)>0&&turnover(i)<1}).sort(function(a,b){return turnover(a)-turnover(b)});
   var byCat={};list.forEach(function(i){byCat[i.cat||"سایر"]=(byCat[i.cat||"سایر"]||0)+invValue(i)});
   var maxc=1;for(var k in byCat)if(byCat[k]>maxc)maxc=byCat[k];
-  function costTable(items,title){
-    var rows=items.filter(function(i){return i.qty>0}).sort(function(a,b){return b.qty*unitCost(b)-a.qty*unitCost(a)}).map(function(i){
-      return"<tr onclick=\"openItem('"+i.code+"')\"><td class=\"r\">"+esc(i.name)+'</td><td class="num">'+fmt(Math.round(i.qty))+'</td><td class="num">'+rial(unitCost(i))+'</td><td class="num" style="font-weight:700">'+rial(i.qty*unitCost(i))+"</td></tr>";
-    }).join("")||'<tr><td colspan="4" class="empty">—</td></tr>';
-    return'<div class="panel"><div class="st"><span><span class="dot"></span> '+title+"</span><small>"+rial(orderCost(items.filter(function(i){return i.qty>0})))+'</small></div>'+
-      '<div class="tbl-w"><table><thead><tr><th class="r">کالا</th><th>مقدار</th><th>'+tip("هزینه واحد","unitCost")+'</th><th>هزینه ردیف</th></tr></thead><tbody>'+rows+"</tbody></table></div></div>";
+  function costBlock(items,key,title){
+    STORE[key]=items.filter(function(i){return i.qty>0}).map(function(i){return Object.assign({},i,{_problem:"سفارش",_action:rial(i.qty*unitCost(i))})});
+    var rows=STORE[key].map(function(i){return"<tr onclick=\"openItem('"+i.code+"')\"><td class=\"r\">"+esc(i.name)+'</td><td class="num">'+fmt(Math.round(i.qty))+'</td><td class="num">'+rial(unitCost(i))+'</td><td class="num">'+rial(i.qty*unitCost(i))+"</td></tr>"}).join("")||'<tr><td colspan="4" class="empty">—</td></tr>';
+    return collapsible(key,title+" — "+rial(orderCost(items)),STORE[key].length,
+      '<div class="tbl-w"><table><thead><tr><th class="r">کالا</th><th>مقدار</th><th>هزینه واحد</th><th>هزینه ردیف</th></tr></thead><tbody>'+rows+"</tbody></table></div>",
+      "STORE."+key,title);
   }
-  return'<div class="panel"><div class="st"><span><span class="dot"></span> '+tip("مازاد — پول قفل‌شده","overstock")+'</span><small>موجودی > حدود ۱ سال / پرچم مازاد · '+over.length+' مورد</small></div>'+
-    (over.length?over.map(function(i){return actHtml(Object.assign({},i,{_p:40,_problem:"مازاد / خواب بلندمدت",_action:rial(invValue(i))}))}).join(""):'<div class="empty">موردی نیست</div>')+"</div>"+
-    costTable(list.filter(isOrderToday),"جزئیات هزینه سفارش امروز (ریال)")+
-    costTable(list,"جزئیات هزینه سفارش‌های پیشنهادی (ریال)")+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> گردش سرمایه پایین (Turnover &lt; 1)</span></div>'+
-    (lowT.length?lowT.slice(0,15).map(function(i){return'<div class="bar-r" onclick="openItem(\''+i.code+'\')"><div class="bar-n">'+esc(i.name)+'</div><div class="bar-t"><div class="bar-f o" style="width:50%"></div></div><b>'+fmt(turnover(i),2)+"</b></div>"}).join(""):'<div class="empty">—</div>')+"</div>"+
+  return collapsible("over","مازاد — موجودی بیش از یک سال",over.length,
+      over.length?over.map(actHtml).join(""):'<div class="empty">موردی با پوشش ≥ یک سال نیست</div>',"STORE.over","مازاد بیش از یک سال")+
+    costBlock(buildList(list,isOrderToday),"costT","جزئیات هزینه سفارش امروز")+
+    costBlock(list,"costA","جزئیات هزینه سفارش‌های پیشنهادی")+
+    collapsible("lowt","گردش سرمایه پایین",lowT.length,
+      lowT.length?lowT.map(function(i){return'<div class="bar-r" onclick="openItem(\''+i.code+'\')"><div class="bar-n">'+esc(i.name)+'</div><div class="bar-t"><div class="bar-f o" style="width:45%"></div></div><b>'+fmt(turnover(i),2)+"</b></div>"}).join(""):'<div class="empty">—</div>',null,null)+
     '<div class="panel"><div class="st"><span><span class="dot"></span> ارزش موجودی بر اساس دسته</span></div>'+
     Object.keys(byCat).sort(function(a,b){return byCat[b]-byCat[a]}).map(function(k){return'<div class="bar-r"><div class="bar-n">'+esc(k)+'</div><div class="bar-t"><div class="bar-f gold" style="width:'+(byCat[k]/maxc*100)+'%"></div></div><b>'+rial(byCat[k])+"</b></div>"}).join("")+"</div>";
 }
@@ -545,24 +599,29 @@ function viewSuppliers(list){
   arr.sort(function(a,b){return a.score-b.score});
   var high=arr.filter(function(s){return/high|crit/i.test(s.risk)});
   var avgD=arr.length?arr.reduce(function(s,a){return s+a.avgDelay},0)/arr.length:0;
-  var best=arr.slice(0,5),worst=arr.slice().reverse().filter(function(s){return/high|crit|med/i.test(s.risk)}).slice(0,5);
+  var best=arr.slice(0,5);
+  var worst=arr.filter(function(s){return/high|crit|med/i.test(s.risk)}).slice().sort(function(a,b){return b.score-a.score}).slice(0,8);
   if(!worst.length)worst=arr.slice(-5).reverse();
+  STORE.worstSup=worst.map(function(s){return{code:s.code,name:s.name,stockStatus:"",dts:0,qty:0,stock:s.n,_problem:"ریسک "+s.risk+" · تأخیر "+fmt(s.delayRate*100,0)+"%",_action:"بهبود یا تعویض"}});
   function srow(s,rank){return'<div class="act"><div class="prio">'+rank+'</div><div><div class="nm">'+esc(s.name)+'</div><div class="mt">تأخیر '+fmt(s.delayRate*100,0)+'٪ · '+esc(s.risk)+' · '+s.n+' کالا</div></div><span class="chip '+sev(s.risk)+'">'+esc(s.risk)+"</span></div>"}
-  return'<div class="kpi-g">'+
-    '<div class="kpi i"><div class="l">تأمین‌کنندگان فعال</div><div class="v">'+arr.length+'</div></div>'+
+  return'<div class="kpi-g"><div class="kpi i"><div class="l">تأمین‌کنندگان فعال</div><div class="v">'+arr.length+'</div></div>'+
     '<div class="kpi c"><div class="l">تأمین‌کنندگان پرریسک</div><div class="v">'+high.length+'</div></div>'+
     '<div class="kpi h"><div class="l">میانگین تأخیر</div><div class="v">'+fmt(avgD,1)+'</div><div class="s">روز</div></div></div>'+
     '<div class="two"><div class="panel"><div class="st"><span><span class="dot"></span> بهترین‌ها</span></div>'+(best.map(function(s,i){return srow(s,i+1)}).join("")||'<div class="empty">—</div>')+"</div>"+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> نیازمند بهبود یا تعویض</span></div>'+(worst.map(function(s,i){return srow(s,i+1)}).join("")||'<div class="empty">—</div>')+"</div></div>";
+    collapsible("worst","نیازمند بهبود یا تعویض",worst.length,worst.map(function(s,i){return srow(s,i+1)}).join("")||'<div class="empty">—</div>',"STORE.worstSup","تأمین‌کنندگان نیازمند بهبود")+"</div>";
 }
 
 function viewStrategy(list){
-  var d14=list.filter(function(i){return i.dts>0&&i.dts<=14});
+  var d14=list.filter(function(i){return i.dts>0&&i.dts<=14}).sort(function(a,b){return a.dts-b.dts});
+  d14.forEach(function(i){var m=actionMeta(i);i._problem=m.problem;i._action=m.action});
   var shortC=list.filter(function(i){return i.coverage>0&&i.avgLead>0&&i.coverage<i.avgLead});
+  shortC.forEach(function(i){i._problem="پوشش "+fmt(i.coverage,0)+" < Lead "+fmt(i.avgLead,0);i._action=i.qty?("سفارش "+fmt(Math.round(i.qty))):"پایش"});
+  STORE.d14=d14;STORE.shortC=shortC;
   return'<div class="kpi-g">'+
-    '<div class="kpi c" onclick="showKpiList(\'اتمام ≤ ۱۴ روز\',\'\',d14)"><div class="l">اتمام در ۱۴ روز یا کمتر</div><div class="v">'+d14.length+'</div><div class="go">لیست ←</div></div>'+
-    '<div class="kpi h" onclick="showKpiList(\'پوشش < زمان تأمین\',TIPS.shortCover,shortC)"><div class="l">'+tip("پوشش کمتر از زمان تأمین","shortCover")+'</div><div class="v">'+shortC.length+'</div><div class="go">لیست ←</div></div></div>'+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> اتمام ≤۱۴ روز</span></div>'+(d14.length?d14.sort(function(a,b){return a.dts-b.dts}).map(function(i){return actHtml(Object.assign({},i,{_p:10,_problem:"DTS "+Math.round(i.dts),_action:i.qty?("سفارش "+fmt(Math.round(i.qty))):"پایش"}))}):'<div class="empty">—</div>')+"</div>";
+    '<div class="kpi c"><div class="l">اتمام در ۱۴ روز یا کمتر</div><div class="v">'+d14.length+'</div></div>'+
+    '<div class="kpi h"><div class="l">'+tip("پوشش کمتر از زمان تأمین","shortCover")+'</div><div class="v">'+shortC.length+'</div></div></div>'+
+    collapsible("d14","لیست اتمام ≤ ۱۴ روز",d14.length,d14.length?d14.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.d14","اتمام ≤۱۴ روز")+
+    collapsible("sc","لیست پوشش < زمان تأمین",shortC.length,shortC.length?shortC.map(actHtml).join(""):'<div class="empty">—</div>',"STORE.shortC","پوشش کوتاه");
 }
 
 function viewSettings(){
@@ -570,12 +629,11 @@ function viewSettings(){
   return'<div class="panel"><div class="st"><span><span class="dot"></span> پوسته</span></div><div class="theme-g">'+
     '<button type="button" class="theme-opt'+(th==="light"?" on":"")+'" data-t="light"><div class="theme-prev" style="background:linear-gradient(135deg,#f0f3f9,#1e40af)"></div>روشن</button>'+
     '<button type="button" class="theme-opt'+(th==="dark"?" on":"")+'" data-t="dark"><div class="theme-prev" style="background:linear-gradient(135deg,#0a0e17,#60a5fa)"></div>تاریک</button>'+
-    '<button type="button" class="theme-opt'+(th==="sand"?" on":"")+'" data-t="sand"><div class="theme-prev" style="background:linear-gradient(135deg,#f7f1e8,#9a3412)"></div>خاکی صنعتی</button></div></div>'+
-    '<div class="panel"><div class="st"><span><span class="dot"></span> منبع داده</span></div><div style="font-size:13px;line-height:1.9">وضعیت: <b>'+(LIVE?"زنده":"نمونه")+"</b><br>sync: "+toJalali(GEN)+"<br>کالا "+ITEMS.length+" · تأمین "+SUPPLIERS.length+" · values "+VALUES.length+'<br><span dir="ltr">data/dashboard.json</span><br>رمز: ۱ عملیاتی · ۲ مدیریتی</div></div>';
+    '<button type="button" class="theme-opt'+(th==="sand"?" on":"")+'" data-t="sand"><div class="theme-prev" style="background:linear-gradient(135deg,#f7f1e8,#9a3412)"></div>خاکی</button></div></div>'+
+    '<div class="panel"><div class="st"><span><span class="dot"></span> منبع</span></div><div style="font-size:13px;line-height:1.9">'+(LIVE?"زنده":"نمونه")+" · "+toJalali(GEN)+"<br>کالا "+ITEMS.length+" · values "+VALUES.length+" · رمز ۱ / ۲</div></div>";
 }
 
 function updatePill(){var el=document.getElementById("syncPill"),h=hoursAgo(GEN);if(!LIVE){el.className="pill n";el.textContent="داده نمونه";return}if(h!=null&&h>2){el.className="pill o";el.textContent="داده قدیمی";return}el.className="pill g";el.textContent="زنده"}
-
 function renderAll(){
   renderTabs();updatePill();
   var list=filtered();
@@ -588,8 +646,7 @@ function bindTips(){
   Array.prototype.forEach.call(document.querySelectorAll(".has-tip"),function(el){
     el.onmouseenter=el.onclick=function(e){
       var box=document.getElementById("tipBox");box.textContent=el.getAttribute("data-tip")||"";box.classList.add("on");
-      var r=el.getBoundingClientRect();box.style.left=Math.min(window.innerWidth-20,Math.max(10,r.left))+"px";
-      box.style.top=(r.bottom+8)+"px";e.stopPropagation();
+      var r=el.getBoundingClientRect();box.style.left=Math.min(window.innerWidth-20,Math.max(10,r.left))+"px";box.style.top=(r.bottom+8)+"px";e.stopPropagation();
     };
   });
 }
@@ -599,8 +656,7 @@ function loadData(){
   LIVE=false;var i=0;
   function next(){
     if(i>=DATA_URLS.length){normalize(SAMPLE);document.getElementById("sampleBanner").classList.add("on");renderFilters();renderAll();return}
-    var url=DATA_URLS[i++];
-    fetch(url+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("x");return r.json()}).then(function(raw){
+    fetch(DATA_URLS[i++]+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("x");return r.json()}).then(function(raw){
       normalize(raw);LIVE=true;document.getElementById("sampleBanner").classList.remove("on");renderFilters();renderAll();
     }).catch(function(){next()});
   }
@@ -608,7 +664,7 @@ function loadData(){
 }
 
 document.getElementById("lockModes").onclick=function(e){var b=e.target.closest(".lock-mode");if(!b)return;chosenLock=b.getAttribute("data-m");document.getElementById("lockModes").style.display="none";document.getElementById("lockPass").classList.add("on");document.getElementById("lockPin").focus()};
-document.getElementById("lockBack").onclick=function(){chosenLock=null;document.getElementById("lockModes").style.display="grid";document.getElementById("lockPass").classList.remove("on");document.getElementById("lockErr").textContent=""};
+document.getElementById("lockBack").onclick=function(){chosenLock=null;document.getElementById("lockModes").style.display="grid";document.getElementById("lockPass").classList.remove("on")};
 function tryUnlock(){
   var pin=(document.getElementById("lockPin").value||"").trim(),need=chosenLock==="mgmt"?CODE_MGMT:CODE_OPS;
   if(pin===need){setAuthed(true);MODE=chosenLock||"ops";try{sessionStorage.setItem(LS_MODE,MODE)}catch(e){}
@@ -623,15 +679,18 @@ document.getElementById("btnLogout").onclick=function(){setAuthed(false);locatio
 document.getElementById("btnRefresh").onclick=loadData;
 document.getElementById("btnSettings").onclick=function(){TAB="settings";renderAll()};
 document.getElementById("drawerX").onclick=closeDrawer;document.getElementById("drawerBg").onclick=closeDrawer;
-document.getElementById("kpiX").onclick=closeKpi;
-document.getElementById("kpiModal").onclick=function(e){if(e.target.id==="kpiModal")closeKpi()};
-document.getElementById("kpiPrint").onclick=function(){window.print()};
+document.getElementById("shareX").onclick=function(){document.getElementById("shareModal").classList.remove("on")};
+document.getElementById("shareModal").onclick=function(e){if(e.target.id==="shareModal")document.getElementById("shareModal").classList.remove("on")};
+document.getElementById("optPrint").onclick=doPrint;
+document.getElementById("optPdf").onclick=function(){alert("در پنجره چاپ، مقصد را «ذخیره به‌صورت PDF» انتخاب کنید.");doPrint()};
+document.getElementById("optShare").onclick=doShare;
+document.getElementById("optCopy").onclick=doCopy;
 document.getElementById("modeSeg").onclick=function(e){
   var b=e.target.closest("button[data-m]");if(!b)return;MODE=b.getAttribute("data-m");TAB=tabsForMode()[0].id;
   Array.prototype.forEach.call(document.querySelectorAll("#modeSeg button"),function(x){x.classList.toggle("on",x.getAttribute("data-m")===MODE)});
   FILTERS={};renderFilters();renderAll();
 };
-window.isCritical=isCritical;window.isOrderToday=isOrderToday;window.isWarningOnly=isWarningOnly;window.filtered=filtered;window.TIPS=TIPS;
+window.STORE=STORE;
 
 if(isAuthed()){
   try{MODE=sessionStorage.getItem(LS_MODE)||"ops"}catch(e){}
